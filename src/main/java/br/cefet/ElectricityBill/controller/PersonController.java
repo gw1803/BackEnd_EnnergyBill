@@ -19,7 +19,7 @@ public class PersonController {
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
-
+    
     @GetMapping("/{id}")
     public ResponseEntity<Person> getById(@PathVariable Long id){
         return ResponseEntity.ok().body(personService.getById(id));
